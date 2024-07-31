@@ -9,51 +9,38 @@ main {
     /* background-color: #000; */
 }
 
-.logo {
-    width: 208px;
-    position: absolute;
-    transition: transform 1s, opacity 2s;
-    animation: fadeOutScale 1s forwards 1s;
-}
-
-
 .section {
-    height: 100%;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #000;
     color: white !important;
     position: relative;
-
 }
 
 .subContainer {
     max-width: 1200px;
+    padding: 60px 20px;
 }
 
-.subContainer {
-    padding: 60px 0;
-}
-.subContainer div{
+ /* {
     opacity: 0;
-    transition: transform 1s, opacity 2s;
-    animation: fadeInScale 1s forwards 2s;
-}
-
-
-.meisterwerk {
+    transition: transform 1s, opacity 1s;
+    animation: fadeInScale 1s forwards 1s;
+} */
+.meisterwerk.active{
     opacity: 0;
     transform: translateX(-100%);
-    transition: transform 2s,opacity 2s;
-    animation: left-to-place 2s forwards 2s;
+    transition: transform 1s, opacity transform 0.5s;
+    animation: left-to-place 1s forwards 0.5s;
 }
-hr{
-    transform: translateX(20px)  translateY(-20);
-    transition: transform 2s,opacity 2s;
-    animation:  divider-animate  2s forwards 2s;
+hr {
+    opacity: 0;
+    transform: translateX(20px) translateY(-20px);
+    transition: transform 1s, opacity 0.5s;
+    animation: divider-animate 1s forwards 0.5s;
 }
-
 .parallax-content-item {
     padding: 172px 0;
 }
@@ -127,20 +114,16 @@ hr{
     opacity: 0;
     transform: translateX(-100%);
 }
-
 .show-paragraph {
     opacity: 1;
     transform: translateX(0);
 }
-
 .slide-right {
     transform: translateX(100%);
 }
-
 .slide-left {
     transform: translateX(0);
 }
-
 .paragraph-toggle-btn {
     position: absolute;
     top: 50%;
@@ -309,7 +292,11 @@ hr{
 
 .forge-detail {
     opacity: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
+
 
 .forge-detail.active {
     transition: transform 1s, opacity 1s;
@@ -358,6 +345,7 @@ hr{
 .p-container {
     color: white;
     width: 503px;
+    padding-top: 5px;
     font-size: 20px;
     text-align: center;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -391,6 +379,7 @@ hr{
     background-image: url("../assets/img/Aboutus/redcar.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     transform: scale(1.7)
 }
 
@@ -422,6 +411,161 @@ hr{
     background-position: center;
 }
 
+/* responsive ness */
+
+@media (max-width: 1024px) {
+    .section {
+        height:auto;
+    }
+    .subContainer {
+        max-width: 1200px;
+    }
+    .subContainer {
+        padding: 60px 20px;
+    }
+    .p-container{
+        font-size: 18px;
+        width: 450px;
+        padding-top: 5px;
+    }
+    .al-card {
+        width: 300px;
+        height: 300px;
+    }
+   
+    .forge-detail {
+        opacity: 0;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .forge-detail.active {
+        transition: transform 1s, opacity 1s;
+        animation: detailanime 1s forwards 0.5s;
+    }
+    .al-content {
+        padding: 20px;
+    }
+    .al-content p:nth-of-type(1) {
+        font-size: 40px;
+    }
+    .al-content p:nth-of-type(2) {
+        font-size: 30px;
+    }
+    .al-content p:nth-of-type(3) {
+        font-size: 20px;
+        padding-top: 5px;
+    }
+    .al-content h1 {
+        font-size: 60px;
+    }
+    @keyframes al-card-animate-1024 {
+        0% {
+            transform: scale(1) translateX(0);
+            opacity: 1;
+        }
+    
+        100% {
+            transform: scale(0.6) translateX(500px);
+            opacity: 0.7;
+        }
+    }
+    .al-card.active {
+        animation: al-card-animate-1024 1s forwards 0.5s;
+    }
+    .wheel img{
+       width:500px ;
+    }
+    .detail img{
+        width: 600px;
+    }
+    @keyframes wheelmoving-1024 {
+        0% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    
+        100% {
+            opacity: 0.6;
+            transform: translateX(-300px);
+        }
+    }
+    .wheel.active {
+        animation: wheelmoving-1024 1s forwards 0.5s;
+    }
+
+    
+}
+@media (max-width: 768px) {
+    .subContainer {
+        padding: 60px 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .button{
+        display: flex;
+        justify-content: center;
+    }
+    .paragraph-sec{
+        font-size: 14px;
+    }
+    .forge-detail img{
+       width: 300px;
+    }
+    .who-detail img{
+        width: 400px;
+    }
+   
+    .p-container{
+        font-size: 16px;
+        width: 450px;
+        padding-top: 5px;
+    }
+
+    @keyframes al-card-animate-1024 {
+        0% {
+            transform: scale(1) translateX(0);
+            opacity: 1;
+        }
+    
+        100% {
+            transform: scale(0.6) translateX(500px);
+            opacity: 0.7;
+        }
+    }
+    .al-card.active {
+        animation: al-card-animate-1024 1s forwards 0.5s;
+    }
+    .wheel img{
+       width:450px ;
+    }
+    .detail img{
+        width: 400px;
+    }
+    @keyframes wheelmoving-768 {
+        0% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    
+        100% {
+            opacity: 0.6;
+            transform: translateX(-230px);
+        }
+    }
+    .wheel.active {
+        animation: wheelmoving-768 1s forwards 0.5s;
+    }
+    .realWorld img{
+        width: 400px;
+    }
+}
+
+
+/* animations */
+
 @keyframes fadeOutScale {
     0% {
         opacity: 1;
@@ -437,12 +581,9 @@ hr{
 @keyframes fadeInScale {
     0% {
         opacity: 0;
-
     }
-
     100% {
         opacity: 1;
-
     }
 }
 
@@ -461,11 +602,13 @@ hr{
 
 @keyframes divider-animate {
     0% {
+        opacity: 0;
         transform: translateX(20px);
         transform: translateY(-20px);
     }
 
     100% {
+        opacity: 1;
         transform: translateX(0);
         transform: translateY(0);
     }

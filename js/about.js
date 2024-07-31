@@ -8,6 +8,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const who_are_we = document.querySelector('.who-are-we')
     const section2 =  document.querySelector('.section2')
     const who_detail = document.querySelector('.who-detail')
+    const meisterwerk = document.querySelector('.meisterwerk')
+
 
     function isInViewport(element) {
         const rect = element.getBoundingClientRect();
@@ -46,6 +48,10 @@ document.addEventListener("DOMContentLoaded", function() {
         if (isInViewport(who_detail)) {
             who_detail.classList.add('active');
         }
+        if (isInViewport(meisterwerk)) {
+            meisterwerk.classList.add('active');
+        }
+        
     }
 
     window.addEventListener('scroll', onScroll);

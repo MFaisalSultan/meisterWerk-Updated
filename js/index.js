@@ -138,49 +138,49 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // About Page Paragraph
 
-document.addEventListener("DOMContentLoaded", function () {
-  var toggleButtons = document.querySelectorAll(".paragraph-toggle-btn");
+// document.addEventListener("DOMContentLoaded", function () {
+//   var toggleButtons = document.querySelectorAll(".paragraph-toggle-btn");
 
-  toggleButtons.forEach(function (toggleButton) {
-    var firstPara = toggleButton.parentElement.querySelector(".first-para");
-    var secondPara = toggleButton.parentElement.querySelector(".second-para");
-    var toggleImage = toggleButton.querySelector("img");
+//   toggleButtons.forEach(function (toggleButton) {
+//     var firstPara = toggleButton.parentElement.querySelector(".first-para");
+//     var secondPara = toggleButton.parentElement.querySelector(".second-para");
+//     var toggleImage = toggleButton.querySelector("img");
 
-    toggleButton.addEventListener("click", function () {
-      if (secondPara.classList.contains("hidden-paragraph")) {
-        // Slide out the first paragraph to the right and fade out
-        firstPara.classList.add("slide-right");
-        firstPara.classList.remove("show-paragraph");
-        firstPara.classList.add("hidden-paragraph");
+//     toggleButton.addEventListener("click", function () {
+//       if (secondPara.classList.contains("hidden-paragraph")) {
+//         // Slide out the first paragraph to the right and fade out
+//         firstPara.classList.add("slide-right");
+//         firstPara.classList.remove("show-paragraph");
+//         firstPara.classList.add("hidden-paragraph");
 
-        // Prepare the second paragraph to slide in from the left and fade in
-        secondPara.classList.remove("hidden-paragraph");
-        secondPara.classList.add("show-paragraph");
-        secondPara.classList.add("slide-left");
+//         // Prepare the second paragraph to slide in from the left and fade in
+//         secondPara.classList.remove("hidden-paragraph");
+//         secondPara.classList.add("show-paragraph");
+//         secondPara.classList.add("slide-left");
 
-        // Rotate the toggle image
-        toggleImage.classList.add("rotate");
-      } else {
-        // Slide out the second paragraph to the right and fade out
-        secondPara.classList.add("slide-right");
-        secondPara.classList.remove("show-paragraph");
+//         // Rotate the toggle image
+//         toggleImage.classList.add("rotate");
+//       } else {
+//         // Slide out the second paragraph to the right and fade out
+//         secondPara.classList.add("slide-right");
+//         secondPara.classList.remove("show-paragraph");
 
-        // Wait for the slide animation to complete before hiding
-        setTimeout(function () {
-          secondPara.classList.add("hidden-paragraph");
-          secondPara.classList.remove("slide-right");
+//         // Wait for the slide animation to complete before hiding
+//         setTimeout(function () {
+//           secondPara.classList.add("hidden-paragraph");
+//           secondPara.classList.remove("slide-right");
 
-          // Slide the first paragraph back into view and fade in
-          firstPara.classList.remove("slide-right");
-          firstPara.classList.add("show-paragraph");
+//           // Slide the first paragraph back into view and fade in
+//           firstPara.classList.remove("slide-right");
+//           firstPara.classList.add("show-paragraph");
 
-          // Reset the position of the second paragraph
-          secondPara.classList.add("slide-left");
-        }, 500); // Match the animation duration
+//           // Reset the position of the second paragraph
+//           secondPara.classList.add("slide-left");
+//         }, 500); // Match the animation duration
 
-        // Rotate the toggle image back
-        toggleImage.classList.remove("rotate");
-      }
-    });
-  });
-});
+//         // Rotate the toggle image back
+//         toggleImage.classList.remove("rotate");
+//       }
+//     });
+//   });
+// });
