@@ -1,0 +1,35 @@
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px; /* Spacing between items */
+    padding: 2px; /* Spacing around the grid */
+}
+
+.gallery-container a {
+    display: block;
+    width: 100%;
+    height: 345px;
+    cursor: pointer;
+}
+
+.gallery-container img {
+    width: inherit;
+    height: inherit;
+    display: block;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .gallery-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

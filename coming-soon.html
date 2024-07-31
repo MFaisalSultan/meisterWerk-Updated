@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon</title>
+    <style>
+        @font-face {
+                font-family: "TerminaTest-Semibold";
+                src: url("../assets/terminaFont/TerminaTest-Demi.otf") format("truetype");
+                font-weight: 600;
+                font-style: normal;
+                }
+        body {
+            margin: 0;
+            font-family: "TerminaTest-Semibold";
+            background-image: url('https://wheel-car.surge.sh/assets/img/HeroImages/Home/MEISTERWERK-1.jpg'); /* Replace with your background image URL */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0,0, 0.7); /* Light gray overlay with opacity */
+        }
+        .container {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .title {
+            font-size: 4.5rem;
+            margin-bottom: 20px;
+            color: #ffffed;
+            font-family: "TerminaTest-Semibold";
+        }
+        .wheel {
+            width: 100px; /* Adjust the size as needed */
+            height: 100px;
+            background-image: url('https://img.custom-wheels.de/wp-content/uploads/2018/12/ZP.09-Deep-Concave-Matte-Gunmetal-Z-Performance-Wheels-Exklusive-Alufelgen-MD-Exclusive-Cardesign-2-415x415.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            animation: spin 2s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="title">Coming Soon</div>
+        <div class="wheel"></div>
+    </div>
+</body>
+</html>

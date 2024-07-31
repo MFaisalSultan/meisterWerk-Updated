@@ -1,0 +1,233 @@
+.offcanvas {
+  height: 100vh !important;
+  background-color: #0d0d0d;
+  color: #fff;
+}
+.offcanvas .bgColor {
+  background-image: url(../assets/img/contactbg.svg);
+  background-repeat: repeat;
+
+  opacity: 0.05;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  /* transition:  background 0.3s, border-radius 0.3s, opacity 0.3s; */
+}
+.offcanvas .btn-close {
+  --bs-btn-close-color: #fff;
+}
+.offcanvas .offcanvas-header {
+  padding: 35px 45px;
+  align-items: end;
+}
+.offcanvas .offcanvas-header button {
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  z-index: 2;
+  width: fit-content;
+  margin-left: auto;
+}
+.offcanvas .offcanvas-header button img {
+  width: 24px;
+  background-color: transparent;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+.offcanvas .offcanvas-body {
+  z-index: 3;
+}
+
+form {
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+form .inputBox {
+  border: 1px solid #343434;
+  padding: 20px 10px 15px 20px;
+}
+
+form .row .inputBox label {
+  margin: 0;
+  color: #4b4b4c !important;
+  font-size: 14px;
+}
+form .row .inputBox .checkbox-container {
+  color: #fff !important;
+}
+form .row .inputBox .sendBtn {
+  height: 60px;
+  background-color: #000;
+  color: #fff;
+}
+
+form .row .inputBox textarea {
+  height: auto;
+}
+
+.col:last-child {
+  margin-right: 0;
+}
+
+input,
+select,
+textarea,
+button {
+  width: 100%;
+  padding: 0px 10px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: transparent;
+  color: #fff;
+  font-size: 18px;
+  height: 40px;
+  font-family: "Be Vietnam Pro";
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #fff;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/*-------------- Custom Select Styling --------------*/
+
+.custom-select {
+  position: relative;
+  font-family: inherit;
+}
+
+.select-selected {
+  background-color: transparent;
+  padding: 7px 10px;
+  cursor: pointer;
+  user-select: none;
+  margin-top: 5px;
+  font-size: 18px;
+  height: 40px;
+  font-family: "Be Vietnam Pro";
+}
+
+.select-selected:after {
+  content: "";
+  position: absolute;
+  top: 18px;
+  right: 10px;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+/* .select-selected.select-arrow-active:after {
+  border-color: transparent transparent #ccc transparent;
+  top: 14px;
+} */
+
+.select-items {
+  position: absolute;
+  background-color: #181818;
+  border: 1px solid #181818;
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+  z-index: 99;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.select-items a {
+  font-size: 14px;
+  padding: 3px 6px;
+  display: block;
+  text-decoration: none;
+  color: #FFFFFFA3;
+  cursor: pointer;
+  font-family: "Be Vietnam Pro";
+}
+
+.select-items a:hover {
+  background-color: #fff;
+  color: #181818;
+}
+
+.select-hide {
+  display: none;
+}
+
+
+button {
+  background-color: #444;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+.checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  user-select: none;
+  color: #fff !important;
+}
+
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 3.5px;
+  left: 0;
+  height: 14px;
+  width: 14px;
+  background-color: #444;
+  cursor: pointer;
+}
+
+.checkbox-container input:checked ~ .checkmark {
+  background-color: #2196f3;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkbox-container .checkmark:after {
+  left: 4px;
+  top: 1px;
+  width: 6px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}

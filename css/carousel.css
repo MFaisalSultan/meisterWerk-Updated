@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* vitenam pro font 400 */
+.be-vietnam-pro-regular {
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+.section_carousel{
+    position: relative;
+    
+    /* width: 100%;
+    height: 100vh;
+    overflow: hidden; */
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.carousel-inner {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s, transform 8s ease-in-out;
+}
+.carousel-slide video{
+    height: 100vh;
+    background-position: center;
+    width: 100vw;
+    object-fit: cover;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform-origin: center center;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+    transform: scale(1.2) translate(0, 0);
+    z-index: 1;
+}
+
+.carousel-slide.inactive {
+        transform: scale(1) translate(0, 0);
+}
+
+.carousel-overlay{
+    position: absolute;
+    top: 0px;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    padding: 35px 45px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.carousel-overlay .middle-side{
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-overlay .logo a{
+    height: 40px;
+    display: block;
+}
+.carousel-overlay .logo a img{
+    width: 120px;
+}
+
+.carousel-overlay .quick-actions{
+    width: 120px;
+    height: calc(100% - 110px);
+    display: flex;
+}
+
+.carousel-overlay .quick-actions .vertical-text-container {
+    writing-mode: vertical-rl; /* Vertical text, right to left */
+    text-orientation: mixed; /* Allows characters to remain upright */
+    transform: rotate(180deg); /* Rotates text to be readable from top to bottom */
+}
+.carousel-overlay .quick-actions .vertical-text-container a{
+    text-transform: none;
+    text-decoration: none;
+
+}
+
+.carousel-overlay .quick-actions .vertical-text-container .vertical-text {
+    /* font-size: 6px; */
+    line-height: 1.5;
+    color: #fff;
+    margin: 0;
+    text-transform: capitalize;
+    /* letter-spacing: 1px; */
+}
+
+.carousel-overlay .quick-actions .vertical-text-container .icon-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 160px);
+    transition: transform 0.3s ease-out;
+    opacity: 0;
+}
+
+.carousel-overlay .quick-actions .vertical-text-container .icon-container .icon {
+    width: 14px;
+    transform: rotate(180deg);
+    margin-left: -8px;
+}
+
+.carousel-overlay .quick-actions .vertical-text-container:hover .icon-container {
+    transform: translate(-50%, 170px);
+    opacity: 1;
+}
+
+
+
+/* HOVER EFFECT */
+
+.bodygroup {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
+.glowing{
+    cursor: pointer;
+}
+.glowing span {
+    font-size: 11px;
+    display: inline-block;
+    margin: 0 -2.5px;
+    opacity: 1;
+    color: white;
+    transition: opacity 0.1s;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.bodygroup:hover .glowing span:nth-child(1) {
+    animation: fadeInOut 0.2s 0s forwards, fadeInOut 0.2s 0.4s forwards;
+}
+
+.bodygroup:hover .glowing span:nth-child(2) {
+    animation: fadeInOut 0.2s 0.025s forwards, fadeInOut 0.2s 0.425s forwards;
+}
+
+.bodygroup:hover .glowing span:nth-child(3) {
+    animation: fadeInOut 0.2s 0.05s forwards, fadeInOut 0.2s 0.45s forwards;
+}
+
+.bodygroup:hover .glowing span:nth-child(4) {
+    animation: fadeInOut 0.2s 0.075s forwards, fadeInOut 0.2s 0.475s forwards;
+}
+
+.bodygroup:hover .glowing span:nth-child(5) {
+    animation: fadeInOut 0.2s 0.1s forwards, fadeInOut 0.2s 0.5s forwards;
+}
+
+.bodygroup:hover .glowing span:nth-child(6) {
+    animation: fadeInOut 0.2s 0.125s forwards, fadeInOut 0.2s 0.525s forwards;
+}
+
+.bodygroup:hover .glowing span:nth-child(7) {
+    animation: fadeInOut 0.2s 0.15s forwards, fadeInOut 0.2s 0.55s forwards;
+}
+
+.bodygroup:hover .glowing span:nth-child(8) {
+    animation: fadeInOut 0.2s 0.175s forwards, fadeInOut 0.2s 0.575s forwards;
+}
+
+.bodygroup:hover .glowing span:nth-child(9) {
+    animation: fadeInOut 0.2s 0.2s forwards, fadeInOut 0.2s 0.6s forwards;
+}
+
+.bodygroup:hover .glowing span:nth-child(10) {
+    animation: fadeInOut 0.2s 0.225s forwards, fadeInOut 0.2s 0.625s forwards;
+}
+
+.bodygroup:hover .glowing span:nth-child(11) {
+    animation: fadeInOut 0.2s 0.25s forwards, fadeInOut 0.2s 0.65s forwards;
+}
+
+.bodygroup:hover .glowing span:nth-child(12) {
+    animation: fadeInOut 0.2s 0.275s forwards, fadeInOut 0.2s 0.675s forwards;
+}
+
+.bodygroup:hover .glowing span:nth-child(13) {
+    animation: fadeInOut 0.2s 0.3s forwards, fadeInOut 0.2s 0.7s forwards;
+}
+
+.bodygroup:hover .glowing span:nth-child(14) {
+    animation: fadeInOut 0.2s 0.325s forwards, fadeInOut 0.2s 0.725s forwards;
+}
+
+.bodygroup:hover .glowing span:nth-child(15) {
+    animation: fadeInOut 0.2s 0.35s forwards, fadeInOut 0.2s 0.75s forwards;
+}
+
+@keyframes fadeInOut {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+
+/* MENU */
+.right-side{
+
+}
+.right-side .menu {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    color: #fff;
+    width: 100px;
+}
+
+.right-side .menu li {
+    position: relative;
+    font-size: 15px;
+    cursor: pointer;
+    width: fit-content;
+    
+}
+.right-side .menu li a{
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+.menu li::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 2px;
+    width: 0;
+    background-color: white;
+    transition: width 0.3s ease-in-out;
+}
+
+.menu li:hover::after {
+    animation: fillFromLeft 0.3s forwards;
+}
+
+.menu li:not(.active):not(:hover)::after {
+    animation: retractToRight 0.3s forwards;
+}
+
+.menu li.active::after {
+    width: 100%;
+}
+
+@keyframes fillFromLeft {
+    from {
+        width: 0;
+        left: 0;
+    }
+    to {
+        width: 100%;
+        left: 0;
+    }
+}
+
+@keyframes retractToRight {
+    from {
+        width: 100%;
+        left: 0;
+    }
+    to {
+        width: 0;
+        left: 100%;
+    }
+}
