@@ -1,7 +1,7 @@
 .offcanvas {
   height: 100vh !important;
   background-color: #0d0d0d;
-  color: #fff;
+  color: #ffffed;
 }
 .offcanvas .bgColor {
   background-image: url(../assets/img/contactbg.svg);
@@ -16,7 +16,7 @@
   /* transition:  background 0.3s, border-radius 0.3s, opacity 0.3s; */
 }
 .offcanvas .btn-close {
-  --bs-btn-close-color: #fff;
+  --bs-btn-close-color: #ffffed;
 }
 .offcanvas .offcanvas-header {
   padding: 35px 45px;
@@ -65,7 +65,7 @@ form .row .inputBox .checkbox-container {
 form .row .inputBox .sendBtn {
   height: 60px;
   background-color: #000;
-  color: #fff;
+  color: #ffffed;
 }
 
 form .row .inputBox textarea {
@@ -87,7 +87,7 @@ button {
   border-radius: 4px;
   box-sizing: border-box;
   background-color: transparent;
-  color: #fff;
+  color: #ffffed;
   font-size: 18px;
   height: 40px;
   font-family: "Be Vietnam Pro";
@@ -95,7 +95,7 @@ button {
 
 input::placeholder,
 textarea::placeholder {
-  color: #fff;
+  color: #ffffed;
 }
 
 input:focus,
@@ -154,13 +154,13 @@ textarea:focus {
   padding: 3px 6px;
   display: block;
   text-decoration: none;
-  color: #FFFFFFA3;
+  color: #ffffedA3;
   cursor: pointer;
   font-family: "Be Vietnam Pro";
 }
 
 .select-items a:hover {
-  background-color: #fff;
+  background-color: #ffffed;
   color: #181818;
 }
 
@@ -227,7 +227,7 @@ button:hover {
   top: 1px;
   width: 6px;
   height: 10px;
-  border: solid white;
+  border: solid #ffffed;;
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
 }

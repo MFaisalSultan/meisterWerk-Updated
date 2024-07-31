@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   );
 
-  document.querySelectorAll("h1, p, .box").forEach((element) => {
+  document.querySelectorAll("h1, p, .box, .animateIt").forEach((element) => {
     observer.observe(element);
   });
 });
